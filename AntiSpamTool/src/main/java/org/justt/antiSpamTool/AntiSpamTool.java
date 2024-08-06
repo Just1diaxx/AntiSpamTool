@@ -42,6 +42,9 @@ public final class AntiSpamTool extends JavaPlugin implements Listener {
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         if (chatEnabled) {
+            if(player.hasPermission("ast.chatbypass") || player.hasPermission("antispamtool.chatbypass")){
+                return;
+            }
             long remainingTime = getChatCooldownRemaining(player.getName());
             if (remainingTime > 0) {
                 player.sendMessage(getConfigString("cooldowns.chat.message")
@@ -57,6 +60,9 @@ public final class AntiSpamTool extends JavaPlugin implements Listener {
     public void onPlayerCommand(PlayerCommandPreprocessEvent event) {
         Player player = event.getPlayer();
         if (commandEnabled) {
+            if(player.hasPermission("ast.commandsbypass") || player.hasPermission("antispamtool.commandsbypass")){
+                return;
+            }
             long remainingTime = getCommandCooldownRemaining(player.getName());
             if (remainingTime > 0) {
                 player.sendMessage(getConfigString("cooldowns.commands.message")
