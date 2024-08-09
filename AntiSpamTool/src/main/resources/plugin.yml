@@ -1,0 +1,39 @@
+name: AntiSpamTool
+version: '2.1'
+main: org.justt.antiSpamTool.AntiSpamTool
+api-version: '1.20'
+prefix: §b[§eAST§b]
+description: 'Send a broadcast to your players!'
+
+commands:
+  reload:
+    description: "Reloads the plugin."
+  chatcooldisable:
+    description: "Disables the chat cooldown."
+  commandscooldisable:
+    description: "Disables the commands cooldown."
+permissions:
+  ast.reload:
+    description: "Permits to use /reload"
+    default: op
+  antispamtool.reload:
+    description: "Permits to use /reload"
+    default: op
+  ast.chatbypass:
+    description: "Permits to a player to bypass the chat cooldown"
+    default: op
+  antispamtool.chatbypass:
+    description: "Permits to a player to bypass the chat cooldown"
+    default: op
+  ast.commandsbypass:
+    description: "Permits to a player to bypass the commands cooldown"
+    default: op
+  antispamtool.commandsbypass:
+    description: "Permits to a player to bypass the commands cooldown"
+    default: op
+  ast.cooldownsdisable:
+    description: "Permits to a player to disable all cooldowns"
+    default: op
+  antispamtool.cooldownsdisable:
+    description: "Permits to a player to disable all cooldowns"
+    default: op
